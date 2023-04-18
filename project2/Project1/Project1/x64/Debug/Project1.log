@@ -1,0 +1,3 @@
+﻿  test1.cpp
+C:\Users\alstj\Desktop\컴퓨터그래픽스\code\project2\Project1\Project1\test1.cpp(7,25): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+LINK : fatal error LNK1104: 'freeglutd.lib' 파일을 열 수 없습니다.
