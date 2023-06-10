@@ -14,21 +14,20 @@ void Draw_shape() {
 void MyDisPlay() {
     glClear(GL_COLOR_BUFFER_BIT);   // 색상 버퍼 지우기
     glMatrixMode(GL_MODELVIEW);     // 매트릭스 곱해서 실제적 위치 지정
-    glRotatef(0.1, 0, 1, 0);        
+    glRotatef(0.1, 0, 1, 0);
     glColor3f(1, 0, 0);             // 컬러 넣기(빨,녹,파)
-    Draw_shape();           // 
+    Draw_shape();           // draw_shape 함수 실행 
 
     glPushMatrix();
     glColor3f(0, 1, 0);
     glTranslated(0.5, -0.5, 0.1);
     Draw_shape();
-
     glPopMatrix();
+
     glPushMatrix();
     glColor3f(0, 0, 1);
     glTranslated(-0.5, -0.5, 0.1);
     Draw_shape();
-
     glPopMatrix();
     glutSwapBuffers();
 }
@@ -36,8 +35,8 @@ void MyDisPlay() {
 int main(int argc, char** argv) {
     glutInit(&argc, argv);  // 라이브러리 초기화, 플랫폼과 윈도우 시스템 연결
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);    //디스 플레이 표면의 주요 특징 결정
-                                        // 더블 : 더블 버퍼 사용, 트루컬러 모드, 기본값
-    glutInitWindowSize(800, 800);     
+    // 더블 : 더블 버퍼 사용, 트루컬러 모드, 기본값
+    glutInitWindowSize(800, 800);
     glutInitWindowPosition(0, 0);
     glutCreateWindow("homework2");
     glClearColor(1.0, 1.0, 1.0, 1.0);       // r,g,b,투명도
